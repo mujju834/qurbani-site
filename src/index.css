@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* index.css */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Card price styling */
+.card-title + h3 {
+  color: #d63384; /* a fresh accent color */
+}
+
+/* Reduce footer text on small screens */
+@media (max-width: 576px) {
+  footer p { font-size: 0.9rem; }
+}
