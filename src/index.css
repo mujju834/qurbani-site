@@ -26,3 +26,48 @@ body {
 @media (max-width: 576px) {
   footer p { font-size: 0.9rem; }
 }
+
+/* src/index.css */
+
+/* Eid Theme Colors */
+:root {
+  --eid-primary: #1d6a2c;   /* deep green */
+  --eid-accent: #dcaf3e;    /* gold */
+  --eid-light: #f9f6f0;     /* creamy background */
+}
+
+/* Navbar overrides */
+.navbar-eid {
+  background: var(--eid-primary);
+}
+.navbar-eid .navbar-brand {
+  color: var(--eid-accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar-eid .nav-link {
+  color: #fff;
+  font-weight: 500;
+}
+.navbar-eid .nav-link:hover {
+  color: var(--eid-accent);
+}
+
+/* Book Now button */
+.btn-book {
+  background: var(--eid-accent);
+  color: var(--eid-primary);
+  font-weight: 600;
+  border: 2px solid var(--eid-accent);
+}
+.btn-book:hover {
+  background: transparent;
+  color: var(--eid-accent);
+}
+
+/* Ensure the hero section sits below the fixed navbar */
+body {
+  padding-top: 70px;
+}
+
+

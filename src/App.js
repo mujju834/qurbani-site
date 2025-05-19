@@ -1,11 +1,12 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import Packages from './components/Packages';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
+import Gallery from './components/Gallery';
+import Fatwa from './components/Fatwa';
+import Payments from './components/Payments';
 import Locations from './components/Locations';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,13 +15,16 @@ function App() {
       <main>
         <Hero />
         <HowItWorks />
+        <Gallery />
+        <Fatwa />
         <Packages />
+        <Payments />
         <Locations />
-        {/* <Testimonials /> */}
       </main>
       <Footer />
     </>
   );
 }
+
 
 export default App;

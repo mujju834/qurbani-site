@@ -8,21 +8,15 @@ export default function Packages() {
       brand: 'Abdullah Goat Farm (Hyd)',
       title: 'Basic Goat',
       price: '₹13,000',
-      features: [
-        'Slaughter & Cutting',
-        'Head, legs & kidneys provided',
-      ],
-      contacts: ['9398167062', '9000385313'], // primary first
+      features: ['Slaughter & Cutting', 'Head, legs & kidneys provided'],
+      contacts: ['9398167062', '9000385313'],
     },
     {
       id: 'abdullah-premium',
       brand: 'Abdullah Goat Farm (Hyd)',
       title: 'Premium with Delivery',
       price: '₹13,500',
-      features: [
-        'Home Delivery (10–12 kg avg.)',
-        'Clean & hygienic packaging',
-      ],
+      features: ['Home Delivery (10–12 kg avg.)', 'Clean & hygienic packaging'],
       contacts: ['9398167062', '9000385313'],
     },
     {
@@ -42,7 +36,7 @@ export default function Packages() {
       title: 'Bull Share',
       price: '$39.99',
       features: ['Includes cutting', 'Serving India-wide (Bull)'],
-      contacts: ['5618174738'], // U.S. Zelle number
+      contacts: ['5618174738'],
     },
     {
       id: 'marhaba-whole',
@@ -54,53 +48,59 @@ export default function Packages() {
     },
   ];
 
-  // helper to build wa.me link
-  const whatsappLink = (num) => {
-    let digits = num.replace(/\D/g, '');
-    // if 10 digits, assume India unless US entry (you can adjust)
-    if (digits.length === 10) {
-      // simple heuristic: Indian numbers start with 9; US numbers with area code not starting 9
-      const country = digits[0] === '9' ? '91' : '1';
-      digits = country + digits;
-    }
-    return `https://wa.me/${digits}`;
+  // Build WhatsApp link with prefilled text
+  const buildWhatsAppLink = (num, title) => {
+    let d = num.replace(/\D/g, '');
+    if (d.length === 10) d = (d[0] === '9' ? '91' : '1') + d;
+    const msg = encodeURIComponent(
+      `Assalamu alaikum, I’d like to book the "${title}" package.`
+    );
+    return `https://wa.me/${d}?text=${msg}`;
   };
 
   return (
     <section id="packages" className="py-5 bg-white">
       <div className="container">
-        <h2 className="text-center mb-5">Our Qurbani Packages</h2>
+        <h2 className="text-center mb-5 display-6 text-success">
+          Our Qurbani Packages
+        </h2>
         <div className="row g-4">
-          {plans.map((p) => {
-            const primary = p.contacts[0];
+          {plans.map((plan) => {
+            const waLink = buildWhatsAppLink(plan.contacts[0], plan.title);
             return (
-              <div key={p.id} className="col-12 col-md-6 col-lg-4">
-                <div className="card h-100 shadow-sm">
+              <div key={plan.id} className="col-12 col-md-6 col-lg-4">
+                <div className="card h-100 shadow-sm rounded-3 border-0">
                   <div className="card-body d-flex flex-column">
-                    <h6 className="text-muted">{p.brand}</h6>
-                    <h5 className="card-title mt-2">{p.title}</h5>
-                    <h3 className="fw-bold my-3">{p.price}</h3>
-                    <ul className="flex-grow-1">
-                      {p.features.map((f, i) => (
-                        <li key={i}>• {f}</li>
+                    <h6 className="text-success fw-bold fs-5">
+                      {plan.brand}
+                    </h6>
+                    <h5 className="card-title mt-2 fw-bold fs-4">
+                      {plan.title}
+                    </h5>
+                    <h3 className="fw-bold my-3">{plan.price}</h3>
+
+                    {/* Use list-unstyled and prefix each item with an arrow */}
+                    <ul className="list-unstyled flex-grow-1 mb-3 ps-0">
+                      {plan.features.map((feat, i) => (
+                        <li key={i} className="mb-2">
+                          {/* Unicode arrow + small right margin */}
+                          <span className="me-2">→</span>
+                          {feat}
+                        </li>
                       ))}
                     </ul>
+
                     <p className="mt-3 mb-1">
-                      <strong>Book & Chat:</strong>{' '}
-                      {p.contacts.map((c, i) => (
-                        <span key={i}>
-                          {i > 0 && ', '}
-                          {c}
-                        </span>
-                      ))}
+                      <strong>Contacts:</strong> {plan.contacts.join(', ')}
                     </p>
+
                     <a
-                      href={whatsappLink(primary)}
+                      href={waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-success mt-auto"
+                      className="btn btn-success mt-auto fw-semibold"
                     >
-                      Book Now
+                      Book {plan.title}
                     </a>
                   </div>
                 </div>
