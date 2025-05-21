@@ -44,7 +44,7 @@ export default function Header() {
               Gallery
             </Nav.Link>
             <Nav.Link onClick={() => scrollToSection('fatwa')}>
-              Fatwa
+              Certificates of Proof
             </Nav.Link>
             <Nav.Link onClick={() => scrollToSection('packages')}>
               Packages

@@ -3,15 +3,15 @@ import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap';
 
 const FATWAS = [
-  { lang: 'English', src: '/images/fatwa-english.jpeg' },
-  { lang: 'اردو', src: '/images/fatwa-urdu.jpeg' },
+  { lang: 'English', src: '/images/fatwa-english.jpg' },
+  { lang: 'اردو', src: '/images/fatwa-urdu.jpg' },
 ];
 
 export default function Fatwa() {
   return (
     <section id="fatwa" className="py-5">
       <div className="container">
-        <h2 className="text-center mb-4 display-6 text-success">Qurbani Fatwa</h2>
+        <h2 className="text-center mb-4 display-6 text-success">Certificates of Proof</h2>
         <Row className="g-4">
           {FATWAS.map((f, i) => (
             <Col key={i} xs={12} md={6}>

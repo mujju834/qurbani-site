@@ -3,9 +3,9 @@ import React from 'react';
 import { Row, Col, Card, Image } from 'react-bootstrap';
 
 const PAYMENT_METHODS = [
-  { name: 'PhonePe', id: '9391856219@ybl', qr: '/qr/phonepe.png' },
-  { name: 'Google Pay', id: '9391856219@okaxis', qr: '/qr/gpay.png' },
-  { name: 'Zelle', id: '561-817-4738', qr: '/qr/zelle.png' },  // new entry
+  { name: 'PhonePe', id: '9391856219@ybl', qr: '/qr/phonepe.jpeg' },
+  { name: 'Google Pay', id: 'abdullahsumama550@oksbi', qr: '/qr/gpay.jpeg' },
+  { name: 'Zelle', id: '561-817-4738', qr: '/qr/zelle.jpeg' },  // new entry
 ];
 
 export default function Payments() {

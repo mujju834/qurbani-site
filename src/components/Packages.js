@@ -5,28 +5,29 @@ export default function Packages() {
   const plans = [
     {
       id: 'abdullah-basic',
-      brand: 'Abdullah Goat Farm (Hyd)',
+      brand: 'Abdullah Goat Farm - India(Hyd)',
       title: 'Basic Goat',
       price: '₹13,000',
-      features: ['Slaughter & Cutting', 'Head, legs & kidneys provided'],
+      features: ['Managed by Abdullah Goat-Farm','Slaughter & Cutting', 'Head, legs & kidneys provided'],
       contacts: ['9398167062', '9000385313'],
     },
     {
       id: 'abdullah-premium',
-      brand: 'Abdullah Goat Farm (Hyd)',
-      title: 'Premium with Delivery',
+      brand: 'Abdullah Goat Farm - India(Hyd)',
+      title: 'Goat-Premium with Delivery',
       price: '₹13,500',
-      features: ['Home Delivery (10–12 kg avg.)', 'Clean & hygienic packaging'],
+      features: ['Managed by Abdullah Goat-Farm','Home Delivery (10–12 kg avg.)', 'Clean & hygienic packaging'],
       contacts: ['9398167062', '9000385313'],
     },
     {
       id: 'ijtemaai-hissa',
-      brand: 'Ijtemaai Qurbani (Odisha)',
+      brand: 'Ijtemaai Qurbani - India(Odisha)',
       title: 'Hissa Share',
       price: '₹3,000 / Hissa',
       features: [
         'Managed by Madarse Khalid Bin Walid Ulema',
         '15 years’ experience',
+        'Distributed directly to Poor and Needy'
       ],
       contacts: ['9391856219', '8074420917'],
     },
