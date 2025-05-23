@@ -38,7 +38,7 @@ export default function Packages() {
         'Organs provided',
         'Premium delivery (+₹500)',
       ],
-      contacts: ['+91 9398167062', '+91 9000385313'],
+      contacts: ['+91 9391856219', '+91 9000385313'],
     },
     {
       id: 'abd-whole-bull',
@@ -51,7 +51,7 @@ export default function Packages() {
         'Organs provided',
         'Premium delivery (+₹500)',
       ],
-      contacts: ['+91 9398167062', '+91 9000385313'],
+      contacts: ['+91 9391856219', '+91 9000385313'],
     },
     {
       id: 'ijtemaai-hissa',
@@ -80,13 +80,13 @@ export default function Packages() {
   ];
 
   // WhatsApp numbers
-  const abdullahWA = '9398167062';
-  const jabbarWA   = '9391856219';
+  const abdullahWA = '9398167062';     // for first two
+  const jabbarWA   = '9391856219';     // for last four
 
   // Build a wa.me link
   const buildWhatsAppLink = (digits, title) => {
     let d = digits.replace(/\D/g, '');
-    if (d.length === 10) d = (d[0] === '9' ? '91' : '1') + d;
+    if (d.length === 10) d = '91' + d;  // all are Indian
     const text = encodeURIComponent(
       `Assalamu alaikum, I’d like to book the "${title}" package.`
     );
@@ -101,9 +101,9 @@ export default function Packages() {
         </h2>
         <div className="row g-4">
           {plans.map((plan, idx) => {
-            // first four plans use Abdullah’s number, others use Jabbar’s
-            const waNumber = idx < 4 ? abdullahWA : jabbarWA;
-            const waLink = buildWhatsAppLink(waNumber, plan.title);
+            // first two plans → Abdullah, others → Jabbar
+            const waNumber = idx < 2 ? abdullahWA : jabbarWA;
+            const waLink   = buildWhatsAppLink(waNumber, plan.title);
 
             return (
               <div key={plan.id} className="col-12 col-md-6 col-lg-4">
@@ -116,6 +116,7 @@ export default function Packages() {
                       {plan.title}
                     </h5>
                     <h3 className="fw-bold my-3">{plan.price}</h3>
+
                     <ul className="list-unstyled flex-grow-1 mb-3 ps-0">
                       {plan.features.map((feat, i) => (
                         <li key={i} className="mb-2">
@@ -124,17 +125,19 @@ export default function Packages() {
                         </li>
                       ))}
                     </ul>
+
                     <p className="mt-3 mb-3">
                       <strong>Contacts:</strong>{' '}
                       {plan.contacts.map((c, i) => {
+                        // make the designated WA number clickable
                         const raw = c.replace(/\D/g, '');
-                        const isWA = raw.endsWith(waNumber);
+                        const isWA = raw === waNumber;
                         return (
                           <span key={i}>
                             {i > 0 && ', '}
                             {isWA ? (
                               <a
-                                href={buildWhatsAppLink(waNumber, plan.title)}
+                                href={waLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-decoration-none text-success fw-semibold"
@@ -148,6 +151,7 @@ export default function Packages() {
                         );
                       })}
                     </p>
+
                     <a
                       href={waLink}
                       target="_blank"
