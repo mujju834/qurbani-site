@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# 🐐 Eid-ul-Adha Qurbani Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application that makes it easy for Muslims to browse, select, and book **Qurbani (ritual animal sacrifice)** services for Eid ul Adha — with hygienic home delivery available in Hyderabad, India.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## About the Project
 
-### `npm start`
+Qurbani is the Islamic practice of sacrificing an animal during Eid ul Adha in memory of Prophet Ibrahim's (AS) willingness to sacrifice his son. This site connects customers with trusted local farms and ulema-managed community programs so that the entire process — selection, slaughter, cutting, and delivery — is handled professionally and in accordance with Islamic guidelines.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Browse Packages** – Choose from goat, bull share, or whole-bull Qurbani packages offered by multiple verified providers.
+- **WhatsApp Booking** – Each package includes a one-tap WhatsApp link pre-filled with a booking message to the relevant contact.
+- **How It Works** – A simple three-step visual guide: Select → Slaughter & Cut → Home Delivery.
+- **Gallery** – Photos from past Qurbanis so customers know what to expect.
+- **Certificates of Proof (Fatwa)** – Religious certificates from scholars validating the authenticity of the slaughter.
+- **Payment Info** – Accepted payment methods and instructions.
+- **Locations / Centers** – Map and address of the Qurbani centers (Shifa Hijama Center, Mehdipatnam, Hyderabad).
+- **Testimonials** – Feedback from previous customers.
 
-### `npm test`
+### Qurbani Packages Offered
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Package | Provider | Price |
+|---|---|---|
+| Basic Goat | Abdullah Goat Farm – Hyderabad | ₹13,000 (~$155) |
+| Premium Goat with Home Delivery | Abdullah Goat Farm – Hyderabad | ₹13,500 (~$160) |
+| Bull Share | Abdullah Farm – Hyderabad | ₹5,000 (~$60) |
+| Whole Bull | Abdullah Farm – Hyderabad | ₹35,000 (~$410) |
+| Hissa Share (community) | Madarse Khalid Bin Walid – Odisha | ₹3,000/hissa (~$40) |
+| Whole Bull (Marhaba) | Marhaba Qurbani | $255 (~₹21,000) |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Layer | Technology |
+|---|---|
+| UI Framework | [React 19](https://react.dev/) |
+| Styling | [Bootstrap 5](https://getbootstrap.com/) + [React-Bootstrap](https://react-bootstrap.github.io/) |
+| Icons | [React Icons](https://react-icons.github.io/react-icons/) |
+| Scaffolding | [Create React App](https://create-react-app.dev/) |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js ≥ 16
+- npm ≥ 8
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Install & Run
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+npm start
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Build for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
 
-### Code Splitting
+The optimized production bundle is written to the `build/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Run Tests
 
-### Analyzing the Bundle Size
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Abdullah** – +91 9398167062
+- **Abdul Jabbar** – +91 9391856219
+- **Address** – Shifa Hijama Center, Indra Nagar, Mehdipatnam, Hyderabad
